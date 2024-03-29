@@ -17,7 +17,7 @@
     console.log(`Your name is ${name} ${firstName} and you live in ${city}`)
 
     // ex 2.1
-    let age = prompt("Enter your age: ")
+    let age = window.prompt("Enter your age: ")
     if (age >= 18) {
         console.log("You are an adult")
     } else {
@@ -25,9 +25,9 @@
     }
 
     // ex 2.2
-    let min = prompt("Enter a value: ")
-    let max = prompt("Enter a greater value: ")
-    let current = prompt ("Enter a value of your choice: ")
+    let min = window.prompt("Enter a value: ")
+    let max = window.prompt("Enter a greater value: ")
+    let current = window.prompt ("Enter a value of your choice: ")
 
     if ((current > min) && (current < max)) {
         console.log(current)
@@ -77,11 +77,11 @@
     // ex 2.5
     let chooseNumber
     while (chooseNumber !== 42) {
-        chooseNumber= prompt("Enter your favorite number: ")
+        chooseNumber= window.prompt("Enter your favorite number: ")
     }
 
     // ex 2.6
-    let userNumberDay = prompt("Please enter a hole number between 1 and 7 (1 and 7 can be used):");
+    let userNumberDay = window.prompt("Please enter a hole number between 1 and 7 (1 and 7 can be used):");
 
     switch (userNumberDay) {
         case 1:
@@ -110,10 +110,10 @@
     }
 
     // ex 2.7
-    let n = prompt("Enter a number")
+    let n = window.prompt("Enter a number")
     let totalAddition = 0
     for (let index = 1; index <= n; index++) {
-        let chosenNumber = prompt("Enter another one: ")
+        let chosenNumber = window.prompt("Enter another one: ")
         totalAddition += chooseNumber
     }
     console.log(totalAddition)
