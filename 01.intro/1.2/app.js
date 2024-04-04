@@ -1,6 +1,12 @@
 (() => {
     // ex 4.1
-    // this function return the surface of a rectangle by multiplying the length by the width
+    /**
+     * Calculates the surface area of a rectangle.
+     * 
+     * @param {number} length - The length of the rectangle.
+     * @param {number} width - The width of the rectangle.
+     * @returns {number} The calculated surface area of the rectangle.
+     */
     function calcSurface (length, width) {
         return length * width
     }
@@ -11,8 +17,11 @@
     console.log(calcSurface(length, width))
 
     // ex 4.2
-    // Math.random genrate number between 0 and 1 and I decided to multiply this by 10 to get a result between 1 and 10. The problem is the fact that 10 is excluded so I add 1 and I put the result
-    //to the floor in order to only have integer and including 10
+    /**
+     * Generates a random integer between 1 and 10 (inclusive).
+     * 
+     * @returns {number} A random integer between 1 and 10.
+     */
     function rand10 () {
         return Math.floor(Math.random() * 10) + 1
     }
@@ -20,7 +29,12 @@
     console.log(rand10())
 
     // ex 4.3
-    // I take the number n from the user and create a for loop with it that will execute rand10 n numbers of time
+    /**
+     * Generates an array of n random integers between 1 and 10 (inclusive).
+     * 
+     * @param {number} n - The number of random integers to generate.
+     * @returns {number[]} An array containing n random integers between 1 and 10.
+     */
     function multiRand(n) {
         const arrayRandomNumbers = [];
         for (let i = 0; i < n; i++) {
@@ -33,9 +47,15 @@
     console.log("Here are the numbers: ", multiRand(n))
 
     // ex 4.4
-    // I take the number nn from the user and I create a loop with it that will push random students in a new array nn numbers of time
     const inputAr = ["Thibaut", "Biloutte", "Denis"]
     const nn = window.prompt("Give a random number greater than 0 and smaller than 3: ")
+    /**
+     * Randomly selects nn learners from the input array.
+     * 
+     * @param {any[]} inputAr - The array of learners to choose from.
+     * @param {number} nn - The number of learners to select.
+     * @returns {any[]} An array containing nn randomly selected learners from the input array.
+     */
     const pickLearner = (inputAr, nn) => {
         const randomLearners = []
         for (let i = 0; i < nn; i++) {
@@ -46,15 +66,19 @@
     console.log(pickLearner(inputAr, nn))
 
     // ex 4.5
-    // I ask the user the coordinates of A and B and I use the function calcDistance to calculate the distance between those two points
-    // calcDistance works in a way that... too lazy to explain!
     const xA = window.prompt("Give the coordinate of A at the position x: ")
     const yA = window.prompt("Give the coordinate of A at the position y: ")
     const xB = window.prompt("Give the coordinate of B at the position x: ")
     const yB = window.prompt("Give the coordinate of B at the position y: ")
     const a = [xA, yA]
     const b = [xB, yB]
-
+    /**
+     * Calculates the Euclidean distance between two points in a 2D plane.
+     * 
+     * @param {number[]} a - The coordinates of the first point [x1, y1].
+     * @param {number[]} b - The coordinates of the second point [x2, y2].
+     * @returns {string} The Euclidean distance between the two points, rounded to 2 decimal places.
+     */
     function calcDistance (a, b) {
         const deltaX = b[0] - a[0]
         const deltaY = b[1] - a[1]
